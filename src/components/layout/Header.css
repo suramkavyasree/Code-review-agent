@@ -1,0 +1,86 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Cool dark gradient */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-bg {
+  background: transparent;
+  display: none;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white; /* Soft teal-blue */
+  margin: 0;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-user-section {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: flex-start;
+  gap: 0.75rem; /* Space between email and logout */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  background-color:   #d1d5db; /* Vibrant teal */
+  color: #1f2937; /* Dark slate gray */
+  font-weight: bold;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: white; /* Light steel blue */
+}
+
+.logout-button {
+  background-color:  #00796b; /* Revert to original  #00796b */
+  color: white;
+  font-weight: 600;
+  font-size:1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  margin-left: 6rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color:  #00796b; /* Slightly #26a69a on hover */
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-user-section {
+    align-self: flex-end;
+  }
+}
