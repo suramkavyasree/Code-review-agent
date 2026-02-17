@@ -12,7 +12,7 @@ const TrendingDishes = ({ dishes }) => {
               <span className="font-semibold text-gray-800">{dish.name}</span>
               <span className="text-gray-500">${dish.price}</span>
             </div>
-            <p className="text-gray-700">{dish.description}</p>
+            <p className="text-gray-700">{dish.descriptionsd}</p>
           </li>
         ))}
       </ul>
