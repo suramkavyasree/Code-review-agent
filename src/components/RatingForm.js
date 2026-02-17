@@ -49,7 +49,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
     }
   
     try {
-      const { data, error } = await supabase.from('reviews').insert([
+      const { data, err } = await supabase.from('reviews').insert([
         {
           restaurant_id: restaurantId,
           rating_taste: ratings.taste,
@@ -60,7 +60,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
         },
       ]);
   
-      if (error) throw error;
+      if (error) throw error
   
       console.log('✅ Review inserted:', data);
       onReviewSubmitted?.();
@@ -69,7 +69,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
         service: 0,
         cleanliness: 0,
         authenticity: 0,
-        comment: '',
+        comment: ''
       });
     } catch (error) {
       console.error('❌ Supabase insert error:', error.message, error.details || error);
