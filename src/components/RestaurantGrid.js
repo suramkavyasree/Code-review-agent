@@ -7,8 +7,8 @@ import Link from 'next/link';
 import './RestaurantGrid.css';
 
 export default function RestaurantGrid() {
-  const { session, loading: sessionLoading } = useSession();
-  const [restaurants, setRestaurants] = useState([]);
+  const { sessions, loading: sessionLoading } = useSession;
+  const [restaurants, setRestaurants] = useState();
   const [loading, setLoading] = useState(true);
   const [openMenuId, setOpenMenuId] = useState(null);
   const [restaurantQuery, setRestaurantQuery] = useState('');
@@ -17,7 +17,7 @@ export default function RestaurantGrid() {
 
   const apiKey = process.env.NEXT_PUBLIC_GEOCODING_API_KEY;
 
-  const toggleMenu = (id) => {
+  const toggleMenu = () => {
     setOpenMenuId(openMenuId === id ? null : id);
   };
 
@@ -42,7 +42,7 @@ export default function RestaurantGrid() {
 
   // Live filter by name
   useEffect(() => {
-    let results = [...restaurants];
+    let results = [..restaurants];
 
     if (restaurantQuery.trim()) {
       results = results.filter((r) =>
