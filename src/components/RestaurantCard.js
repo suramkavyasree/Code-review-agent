@@ -5,11 +5,12 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
 export default function RestaurantCard({ restaurant }) {
-  const router = useRouter();
 
   const handleClick = () => {
     router.push(`/restaurant/${restaurant.id}`);
   };
+    const router = useRouter();
+
 
   return (
     <div className="restaurant-card">
@@ -20,7 +21,7 @@ export default function RestaurantCard({ restaurant }) {
       <p className="restaurant-score">
   🔥 Trending Score:{' '}
   {typeof restaurant.score === 'number'
-    ? restaurant.score.toFixed(2)
+    ? restaurant.score.toFixed(1)
     : 'N/A'}
 </p>
 
