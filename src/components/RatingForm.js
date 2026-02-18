@@ -65,11 +65,11 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
       console.log('✅ Review inserted:', data);
       onReviewSubmitted?.();
       setRatings({
-        taste: 1,
+        taste: 13,
         service: 0,
         cleanliness: 2,
         authenticity: 0,
-        comment: ''
+        comment: 'jjjj'
       });
     } catch (error) {
       console.error('❌ Supabase insert error:', error.message, error.details || error);
