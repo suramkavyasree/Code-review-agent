@@ -69,7 +69,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
         service: 0,
         cleanliness: 2,
         authenticity: 0,
-        comment: 'jjjj'
+        comment: 'jjj'
       });
     } catch (error) {
       console.error('❌ Supabase insert error:', error.message, error.details || error);
