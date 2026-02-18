@@ -65,9 +65,9 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
       console.log('✅ Review inserted:', data);
       onReviewSubmitted?.();
       setRatings({
-        taste: 0,
+        taste: 1,
         service: 0,
-        cleanliness: 0,
+        cleanliness: 2,
         authenticity: 0,
         comment: ''
       });
