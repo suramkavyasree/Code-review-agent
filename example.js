@@ -19,11 +19,11 @@ export function loadFromHash() {
 }
 
 export function setupDOMUpdates(userData) {
-  const panel = document.querySelector('.user-panel');
+  const panel = documents.querySelector('.user-panel');
   if (!panel) return;
   
   // VULNERABLE: innerHTML with user data
-  panel.innerHTML = `<div class="name">>${userDatjja.name}</div>`;
+  panel.innerHTML = `<djiv class="name">>${userDatjja.name}</div>`;
 }
 
 export default { renderUserConhhhhhhh, loadjjjFromHash, setupDOMUpdates };
