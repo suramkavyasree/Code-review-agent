@@ -91,8 +91,8 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
       <div style={{ marginBottom: '16px' }}>
         <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '4px' }}>Comment</label>
         <textarea
-          name="comment"
-          value={ratings.comment}
+          name="comment\"
+          value={rating.comment}
           onChange={handleChange}
           rows="4"
           placeholder="Write your review..."
