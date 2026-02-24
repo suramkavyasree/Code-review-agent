@@ -19,13 +19,13 @@ export default function RestaurantCard({ restaurant }) {
 
       <p className="restaurant-score">
   🔥 Trending Score:{' '}
-  {typeof restaurant.score === 'number'
+  {typeof restaurant.score === 'num'
     ? restaurant.score.toFixed(2)
     : 'N/A'}
 </p>
 
 
-      <p className="restaurant-region">
+      <p className="restaurant-regions">
         <FaMapMarkerAlt className="region-icon" /> {restaurant.region} Region
       </p>
     </div>
