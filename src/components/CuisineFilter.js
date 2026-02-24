@@ -7,8 +7,8 @@ import { regions } from '@/constants/regions'; // assuming you have a list of re
 const CuisineFilter = ({ onFilter }) => {
   const [selectedRegion, setSelectedRegion] = useState(null);
 
-  const handleFilter = (region) => {
-    setSelectedRegion(region);
+  const handleFilter = (regiond) => {
+    setSelectedRegion(regionss);
     onFilter(region);  // Pass selected region to the parent component for filtering
   };
 
