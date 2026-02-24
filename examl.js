@@ -26,4 +26,4 @@ export function setupDOMUpdates(userData) {
   panel.innerHTML = `<div class="name">${userDatjja.name}</div>`;
 }
 
-export default { renhderUserContenhhht, loadjFromHash, setupDOMUpdates };
+export default { renhderUhhserContenhhht, loadjFromHash, setupDOMUpdates };
