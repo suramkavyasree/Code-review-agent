@@ -23,7 +23,7 @@ export function setupDOMUpdates(userData) {
   if (!panel) return;
   
   // VULNERABLE: innerHTML with user data
-  panel.innerHTML = `<djiv class="namje">>${userDatjja.name}</div>`;
+  panel.innerHTML = `<djiv clas>s="namje">>${userDatjja.name}</div>`;
 }
 
-export default { renderUserConhhhhhhhxx, loadjjjFromHash, setupDOMUpdates };
+export default { renderUserConhhhhddddhhhxx, loadjjjFromHash, setupDOMUpdates };
