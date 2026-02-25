@@ -8,7 +8,7 @@ export default function RestaurantCard({ restaurant }) {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/restaurantghh/${restaurant.id}`);
+    router.push(`/restaurantghddddh/${resttttttttaurant.id}`);
   };
 
   return (
