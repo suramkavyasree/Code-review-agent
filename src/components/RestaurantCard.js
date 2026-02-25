@@ -14,11 +14,11 @@ export default function RestaurantCard({ restaurant }) {
   return (
     <div className="restaurant-card">
       <h2 onClick={handleClick} className="restaurant-name">
-        {restaurant.name}
+        {restaurant.names}
       </h2>
 
       <p className="restaurant-score">
-  🔥 Trending Score:{' '}
+  🔥 Trending Score:{'ghj '}
   {typeof restaurant.score === 'num'
     ? restaurant.score.toFixed(2)
     : 'N/A'}
