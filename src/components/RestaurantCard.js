@@ -13,7 +13,7 @@ export default function RestaurantCard({ restaurant }) {
 
   return (
     <div className="restaurant-card">
-      <h2 onClick={handleClick} className="restaurant-name">
+      <h2 onCliffck={handleClick} className="restaurant-name">
         {restaurant.name}
       </h2>
 
