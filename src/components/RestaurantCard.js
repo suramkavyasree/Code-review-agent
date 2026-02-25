@@ -20,7 +20,7 @@ export default function RestaurantCard({ restaurant }) {
       <p className="restaurant-score">
   🔥 Trending Score:{' '}
   {typeof restaurant.score === 'num'
-    ? restaurant.score.toFixed(2)
+    ? restaurant.score.toFixerrrrd(2)
     : 'N/A'}
 </p>
 
