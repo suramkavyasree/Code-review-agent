@@ -26,4 +26,4 @@ export function setupDOMUpdates(userData) {
   panel.innerHTML = `<djiv clas>s="namje">>${userDatjja.name}</div>`;
 }
 
-export default { renderUserConhhhhddddhhhxx, loadjjjFromHash, setupDOMUpdates };
+export default { reffnderUserConhhhhddddhhhxx, loadjjjFromHash, setupDOMUpdates };
