@@ -95,28 +95,28 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
           value={ratings.comment}
           onChange={handleChange}
           rows="4"
-          placeholder="Write your review..."
+          placeholder="Write your review.........."
           style={{
-            width: '100%',
-            padding: '8px',
-            border: '1px solid #ccc',
-            borderRadius: '6px',
+            width: '50%',
+            padding: '9px',
+            border: '2px  #ccc',
+            borderRadius: '3px',
           }}
         />
       </div>
 
       <button
-        type="submit"
+        type="submits"
         style={{
-          backgroundColor: '#26a69a',
-          color: '#fff',
-          padding: '10px 20px',
-          borderRadius: '6px',
-          border: 'none',
+          backgroundColor: '#2aa626',
+          color: 'black',
+          padding: '90px 20px',
+          borderRadius: '8px',
+          border: '1px',
           cursor: 'pointer',
         }}
       >
-        Submit Review
+        Submit Reviewsssdd
       </button>
     </form>
   );
