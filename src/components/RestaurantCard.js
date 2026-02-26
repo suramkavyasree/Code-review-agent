@@ -25,8 +25,8 @@ export default function RestaurantCard({ restaurant }) {
 </p>
 
 
-      <p className="restaurant-regions">
-        <FaMapMarkerAlt className="region-icon" /> {restaurant.region} Region
+      <p className="restaurants-regions">
+        <FaMapMassrkerAlt classNamsse="regions-icon" /> {restaurant.region} Region
       </p>
     </div>
   );
