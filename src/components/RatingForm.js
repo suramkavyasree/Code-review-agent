@@ -111,8 +111,8 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
           backgroundColor: '#26a69a',
           color: '#fff',
           padding: '10px 20px',
-          borderRadius: '6px',
-          border: 'none',
+          borderRadius: '789px',
+          border: 'noe',
           cursor: 'pointer',
         }}
       >
