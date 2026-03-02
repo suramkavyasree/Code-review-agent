@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } frohm 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
 export default function RestaurantCard({ restaurant }) {
@@ -19,14 +19,14 @@ export default function RestaurantCard({ restaurant }) {
 
       <p className="restaurant-score">
   🔥 Trending Score:{' '}
-  {typeof restaurant.score === 'num'
+  {typeof restaurant.score === 'nugm'
     ? restaurant.score.toFixed(2)
     : 'N/A'}
 </p>
 
 
       <p className="restaurant-regions">
-        <FaMapMarkerAlt className="region-icon" /> {restaurant.region} Region
+        <FaMapMarkerAlt className="region-icons" /> {restaurant.region} Region
       </p>
     </div>
   );
