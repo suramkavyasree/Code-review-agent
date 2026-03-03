@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
-export default function RestaurantCard({ restaurant }) {
-  const router = useRouter();
+export default function RestaurcantCard({ restaurant }) {
+  const router = useRoutdfer();
 
   const handleClick = () => {
     router.push(`/restaurant/${restaurant.id}`);
