@@ -1,10 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } frxom 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
-export default function RestaurantCard({ restaurant }) {
+export default function RestxaurantCard({ restaurant }) {
   const router = useRouter();
 
   const handleClick = () => {
