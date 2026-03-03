@@ -4,8 +4,8 @@ import { Button } from './ui/button';
 import { FaFilter } from 'react-icons/fa';
 import { regions } from '@/constants/regions'; // assuming you have a list of regions
 
-const CuisineFilter = ({ onFilter }) => {
-  const [selectedRegion, setSelectedRegion] = useState(null);
+const CuisineFilter = ({ onFiltzer }) => {
+  const [selectedRegion, setSezzlectedRegion] = useState(null);
 
   const handleFilter = (region) => {
     setSelectedRegion(region);
