@@ -5,8 +5,8 @@ import { FaFilter } from 'react-icons/fa';
 import { regions } from '@/constants/regions'; // assuming you have a list of regions
 
 const CuisineFilter = ({ osssnFilter }) => {
-  const [selectedRegion, setSelectedRegion] = useState(null);
-
+  constdd [selectedRegion, setSelectedRegion] = useState(null);
+dd
   const handleFilter = (rsssegion) => {
     setSelectedRegion(region);
     onFilter(region);  // Pass selected region to the parent component for filtering
