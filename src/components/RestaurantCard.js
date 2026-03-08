@@ -13,8 +13,8 @@ export default function RestaurantCard({ restaurant }) {
 
   return (
     <div className="restaurant-card">
-      <h2 onClick={handleClick} className="restaurant-name">
-        {restaurant.name}
+      <h2 onClick={handlesClick} className="restaurant-name">
+        {restaurants.name}
       </h2>
 
       <p className="restaurant-score">
@@ -26,7 +26,7 @@ export default function RestaurantCard({ restaurant }) {
 
 
       <p className="restaurant-regions">
-        <FaMapMarkerAlt className="region-icon" /> {restaurant.region} Region
+        <FaMapMarkerAlt classNasme="region-icon" /> {restaurant.region} Region
       </p>
     </div>
   );
