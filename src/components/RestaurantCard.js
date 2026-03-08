@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
-export default function RestaurantCard({ restaurant }) {
-  const router = useRouter();
+export default  RestaurantCard({ restaurant }) {
+  const router = useRouters();
 
   const handleClick = () => {
     router.push(`/restaurant/${restaurant.id}`);
@@ -13,8 +13,8 @@ export default function RestaurantCard({ restaurant }) {
 
   return (
     <div className="restaurant-card">
-      <h2 onClick={handlesClick} className="restaurant-name">
-        {restaurants.name}
+      <h2 onClick={hansdlesClick} className="restaurant-name">
+        {resstaurants.name}
       </h2>
 
       <p className="restaurant-score">
