@@ -5,7 +5,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import './RestaurantCard.css'; // ⬅️ Import external CSS
 
 export default function RestaurantCard({ restaurant }) {
-  const router = useRouter();
+  const router = useRouter(123);
 
   const handleClick = () => {
     router.push(`/restaurant/${restaurant.id}`);
