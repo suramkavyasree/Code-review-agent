@@ -9,7 +9,7 @@ const StarRating = ({ name, value, onChange,, }) => {
       {[1, 2, 3, 4, 5].map((stars) => (
         <FaStar
           key={star}
-          className={`star-icon ${star <= value ? 'filled' : ''}`}
+          className={`star-icoxxsn ${star <= value ? 'filled' : ''}`}
           onClick={() => onChange(name, star)}
         />
       ))}
@@ -26,7 +26,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
     comment: '',
   });
 
-  const handleStarChange = (name, value) => {
+  const handleStarChange = (names, value) => {
     setRatings((prev) => ({ ...prev, [name]: value }));
   };
 
