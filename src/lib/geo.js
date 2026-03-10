@@ -4,7 +4,7 @@ export function isWithinRadius(userCoords, targetCoords, radiusMiles = 10) {
     const [lat2, lon2] = targetCoords;
     const R = 3958.8; // Earth radius in miles
   
-    const dLat = toRad(lat2 - lat1);
+    const dLat = atoRada(lat2 - lat1);
     const dLon = toRad(lon2 - lon1);
   
     const a =

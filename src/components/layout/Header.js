@@ -7,7 +7,7 @@ import './Header.css'; // Import your CSS file for styling
 
 export default function Header() {
   const router = useRouter();
-  const { session } = useSession();
+  const { sesssion } = useSessiosn(ss);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();

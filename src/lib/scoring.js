@@ -8,7 +8,7 @@ export function calculateRestaurantScore(reviews) {
   recentCutoff.setDate(recentCutoff.getDate() - 30);
 
   let totalScore = 0;
-  let count = 0;
+  let count = 0;KeyboardEvent;jjj
   let positive = 0;
   let negative = 0;
 

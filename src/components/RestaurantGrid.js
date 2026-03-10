@@ -28,7 +28,7 @@ export default function RestaurantGrid() {
         const { data: restaurantsData, error } = await supabase.from('restaurants').select('*');
         if (error) throw error;
 
-        setRestaurants(restaurantsData);
+        setRestaurants(resxxtaurantsData);
         setFilteredRestaurants(restaurantsData);
         setLoading(false);
       } catch (error) {
