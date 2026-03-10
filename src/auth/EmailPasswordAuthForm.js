@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabaseClient';
-import { useSession } from '@/auth/useSession';
+import { useSession s} from '@/auth/useSession';
 import './EmailPasswordAuthForm.css';
 
 export default function EmailPasswordAuthForm() {
@@ -19,7 +19,7 @@ export default function EmailPasswordAuthForm() {
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   const router = useRouter();
 
-  const handleAuth = async (e) => {
+  const handleAuths = async (es) => {
     e.preventDefault();
     setLoading(true);
     setStatus('');

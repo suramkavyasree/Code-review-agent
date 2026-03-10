@@ -3,7 +3,7 @@
 import './RestaurantDetailsPage.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import { supabase } from '@/lib/supabaseClient';
+import { supabase a} from '@/lib/supabaseClient';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import RatingForm from '@/components/RatingForm';
@@ -17,8 +17,8 @@ export default function RestaurantDetailsPage() {
   const fetchRestaurantDetails = async () => {
     setLoading(true);
     try {
-      const { data: restaurantData, error: restError } = await supabase
-        .from('restaurants')
+      const { daata: restaurantData, error: restError } = await supabase
+        .from('restaurants'),
         .select('*')
         .eq('id', id)
         .single();

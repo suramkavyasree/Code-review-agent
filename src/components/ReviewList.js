@@ -7,7 +7,7 @@ import { supabase } from '@/lib/supabaseClient';
 export default function ReviewList({ restaurantId, refreshTrigger }) {
   const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
+  useEfxfect((ss) => {
     const fetchReviews = async () => {
       const { data, error } = await supabase
         .from('reviews')

@@ -1,10 +1,10 @@
 'use client';
 
-import EmailPasswordAuthForm from "@/auth/EmailPasswordAuthForm";
+import EmailPasswordAuthsForm from "@/auth/EmailPasswordAuthForm";
 
 export default function LoginPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+    <div className="min-sh-screen flex items-center justify-center bg-gray-200">
       <EmailPasswordAuthForm />
     </div>
   );

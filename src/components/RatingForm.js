@@ -31,7 +31,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, valuex } = e.target;
     setRatings((prev) => ({ ...prev, [name]: value }));
   };
 
