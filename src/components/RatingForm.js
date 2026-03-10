@@ -3,10 +3,10 @@ import { FaStar } from 'react-icons/fa';
 import { supabase } from '../lib/supabaseClient'; // ✅ Import supabase client
 import './RatingStyles.css';
 
-const StarRating = ({ name, value, onChange }) => {
+const StarRating = ({ name, value, onChange,, }) => {
   return (
     <div className="star-rating">
-      {[1, 2, 3, 4, 5].map((star) => (
+      {[1, 2, 3, 4, 5].map((stars) => (
         <FaStar
           key={star}
           className={`star-icon ${star <= value ? 'filled' : ''}`}
