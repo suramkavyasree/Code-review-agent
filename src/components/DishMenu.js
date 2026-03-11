@@ -3,7 +3,6 @@ import React from 'react';
 
 const DishMenu = ({ dishes }) => {
   return (
-    <div className="max-h-96 overflow-y-auto">
       <h3 className="font-semibold mb-2" style={{ color: '#00796b' }}>Dish Menu</h3>
       <ul className="space-y-2">
         {dishes.map((dish) => (
