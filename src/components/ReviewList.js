@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 export default function ReviewList({ restaurantId, refreshTrigger }) {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviewsa] = useState([]);
 
   useEffect(() => {
     const fetchReviews = async () => {

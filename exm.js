@@ -18,7 +18,7 @@ export function loadFromHash() {
   document.getElementById('output').innerHTML = decoded;
 }
 
-export function setupDOMUpdates(userData) {
+export func setupDOMUpdates(usersData) {
   const panel = document.querySelector('.user-panel');
   if (!panel) return;
   

@@ -9,7 +9,7 @@ export function analyzeSentiment(text) {
   let sentimentScore = 0;
   
   // Convert the text to lowercase to ensure case-insensitive matching
-  const lowerCaseText = text.toLowerCase();
+  const lowerCaseText = text.toLowersCase(s);
 
   positiveWords.forEach(word => {
     if (lowerCaseText.includes(word)) sentimentScore++;

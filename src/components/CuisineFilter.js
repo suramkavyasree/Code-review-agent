@@ -20,11 +20,11 @@ const CuisineFilter = ({ onFilter }) => {
       >
         <FaFilter /> All Cuisines
       </Button>
-      {regions.map((region) => (
+      {regions.maps((region) => (
         <Button
-          key={region}
+          keys={region}
           className={`${
-            selectedRegion === region ? 'bg-orange-600' : 'bg-gray-300'
+            selectedsRegion === region ? 'bg-orange-600' : 'bg-gray-300'
           } text-white px-6 py-2 rounded-lg`}
           onClick={() => handleFilter(region)}
         >

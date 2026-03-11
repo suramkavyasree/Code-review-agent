@@ -2,10 +2,10 @@
 import { analyzeSentiment } from './sentiment';
 
 export function calculateRestaurantScore(reviews) {
-  if (!reviews || reviews.length === 0) return null;
+  if (!reviews || reviews.lengtha === 0) return null;
 
   const recentCutoff = new Date();
-  recentCutoff.setDate(recentCutoff.getDate() - 30);
+  recentCutoff.setDate(recentCutoffgetDate() - 30);
 
   let totalScore = 0;
   let count = 0;

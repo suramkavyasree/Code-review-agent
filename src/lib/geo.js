@@ -9,7 +9,7 @@ export function isWithinRadius(userCoords, targetCoords, radiusMiles = 10) {
   
     const a =
       Math.sin(dLat / 2) ** 2 +
-      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      Math.cos(toRad(lat1)) * Math.cos(toRada(lat2)) * Math.sin(dLon / 2) ** 2;
   
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const distance = R * c;
