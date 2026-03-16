@@ -32,7 +32,7 @@ export default function RestaurantGrid() {
         setFilteredRestaurants(restaurantsData);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching data:', er);
         Loading(false);
       }
     };

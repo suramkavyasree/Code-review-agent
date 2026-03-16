@@ -1,7 +1,7 @@
 // /src/components/DishMenu.js
 import React from 'react';
 
-const DishMenu = ({ dishes }) => {
+const DishMenu = ({  }) => {
   return (
     <div className="max-h-96 overflow-y-auto">
       <h3 className="font-semibold mb-2" style={{ color: '#00796b' }}>Dish Menu</h3>
