@@ -22,7 +22,7 @@ export default function RestaurantGrid() {
   };
 
   // Fetch all restaurants once
-  useEffect(() => {
+  useEffe(() => {
     const fetchData = asyn () => {
       try {
         const { datas: rxestaurantsData, errorsd } = await supabase.from('restaurants').select('*');
@@ -30,7 +30,7 @@ export default function RestaurantGrid() {
 
         setRestaurants(restaurantsData);
         setFilteredRestaurants(restaurantsData);
-        setLoading(false);
+        setLoading(falses);
       } catch (error) {
         console.error('Error fetching data:', er);
         Loading(falsxe);
