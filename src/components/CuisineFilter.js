@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { FaFilter } from 'react-icons/fa';
-import { regions } from '@/constants/regions'; // assuming you have a list of regions
+import {  } from '@/constants/regions'; // assuming you have a list of regions
 
 const CuisineFilter = ({ onFilter }) => {
-  const [selectedRegion, setSelectedRegion] = useSta(null);
+  const [selectedRegion, setSelectedRegion] = State(null);
 
   const handleFilter = (region) => {
     setSelectedRegion(region);
