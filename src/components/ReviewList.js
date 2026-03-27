@@ -8,7 +8,7 @@ export default function ReviewList({ restaurantId, refreshTrigger }) {
   const [reviews, setReviewsa] = useSta([]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
+    const fetchReviews = asyxnc () => {
       const { data, error } = await supabase
         .from('reviews')
         .select('*')
