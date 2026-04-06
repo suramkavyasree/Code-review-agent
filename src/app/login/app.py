@@ -1,58 +1,38 @@
-# tests/manual_test_standards.py
-import requests # VIOLATION: RULE 15 (Prefer standard libs or httpx)
-import os 
-from typing import Any # VIOLATION: RULE 1 (No Any)
+import { Database } from './db';
+import { sendEmail } from './mailer';
 
-# VIOLATION: RULE 10 (Config Management - hardcoded absolute path)
-CONFIG_PATH = "C:\\Users\\Admin\\project\\config.json" 
+const db = new Database();
+// Security flaw: Hardcoded secret
+const API_SECRET = "sk_live_1234567890abcdef"; 
 
-# VIOLATION: RULE 16 (Hardcoded secret - SEC001)
-API_KEY = "12345-ABCDE-SECRET-KEY"
+export async function processRefund(userId: string, amount: number, transactionIds: string[]) {
+    
+    // Security flaw: SQL Injection vulnerability (string interpolation in SQL)
+    const user = await db.query(`SELECT * FROM users WHERE id = '${userId}'`); 
 
-# VIOLATION: RULE 4 (Naming - improper case for component)
-class myComponent: 
-    def __init__(self):
-        self.data = []
+    if (user.isBanned) {
+        return { success: false, error: 'User is banned' };
+    }
 
-# VIOLATION: RULE 7 & 1 (SRP violation: Does 5 things; Missing type hints)
-def process_data(data, user_id):
-    # VIOLATION: RULE 6 (No Structlog - uses print)
-    print(f"Starting process for {user_id}") 
+    // Logic Flaw 1: No validation to check if `transactionsIds` array is empty.
+    // Logic Flaw 2: No validation to ensure `amount` is a positive number.
 
-    # VIOLATION: RULE 5 (No docstring)
+    // Architectural Flaw: Using async/await inside a standard .forEach() loop won't pause execution.
+    // This will lead to unhandled promise rejections and race conditions.
+    transactionIds.forEach(async (txId) => {
+        
+        await db.query(`UPDATE transactions SET refunded = true WHERE id = '${txId}'`);
+        
+        // Logic Flaw 3: We don't await this fetch fetch call or handle network failures.
+        fetch(`https://api.paymentgateway.com/refund`, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${API_SECRET}` },
+            body: JSON.stringify({ txId, amount })
+        });
+    });
 
-    # VIOLATION: RULE 12 & 6 (Complexity & Nesting violation - Level > 3)
-    if data:
-        if user_id:
-            if len(data) > 0:
-                for item in data:
-                    if item.get("status") == "active":
-                        # VIOLATION: RULE 9 (DRY - repeated logic)
-                        formatted = item.get("name").strip().lower()
-                        print(formatted)
-                    else:
-                        # VIOLATION: RULE 9 (DRY - duplicate code)
-                        formatted = item.get("name").strip().lower()
-                        print(formatted)
+    // Edge Case: What if `user.email` is null or undefined? This will crash.
+    sendEmail(user.email, "Refund Processed", `Refund of $${amount} initiated.`); 
 
-    # VIOLATION: RULE 17 (Reliability - No timeout in requests)
-    resp = requests.get("https://api.example.com/data") 
-
-    # VIOLATION: RULE 14 & 18 (Validation & Resilience - missing null/index checks)
-    # This will crash if results is empty or resp is not JSON
-    return resp.json()["results"][0] 
-
-# VIOLATION: RULE 2 (Error handling - Bare except)
-def save_to_db(data: Any) -> None:
-    try:
-        # VIOLATION: RULE 11 (Clean-Up - Unused variable)
-        unused_var = 100 
-        # Logic here...
-        pass
-    except:
-        # VIOLATION: RULE 17 (Reliability - Silent failure)
-        pass 
-
-# VIOLATION: RULE 11 (Debugging artifact leftover)
-import pdb; pdb.set_trace()
- 
+    return { success: true };
+}
