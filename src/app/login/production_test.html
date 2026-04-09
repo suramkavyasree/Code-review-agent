@@ -1,0 +1,13 @@
+<!-- 
+    TEST: HTML COMMENT (SKIP)
+    <script>alert("XSS in comment");</script>
+    <div onclick="eval('hack')">Commented out</div>
+-->
+
+<div class="main">
+    <!-- TEST: AGGRESSIVE DEDUP (ONE COMMENT ONLY) -->
+    <!-- Hits Open Redirect and Insecure Attribute -->
+    <a href="http://my-site.com/out?url=" onclick="window.location.href = location.hash">
+        Click
+    </a>
+</div>
