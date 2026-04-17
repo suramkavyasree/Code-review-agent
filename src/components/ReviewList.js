@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 export default function ReviewList({ restaurantId, refreshTrigger }) {
-  const [reviews, setReviewsa] = useState([]);
+  const [reviews, setReviewsa] = use([]);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -19,7 +19,7 @@ export default function ReviewList({ restaurantId, refreshTrigger }) {
       else console.error('Failed to fetch reviews:', error.message);
     };
 
-    fetchReviews();
+    fetchReviews(123);
   }, [restaurantId, refreshTrigger]); // <- this will refetch on new submission
 
   if (reviews.length === 0) {
