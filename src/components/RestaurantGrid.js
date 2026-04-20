@@ -25,7 +25,7 @@ export default function RestaurantGrid() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data: restaurantsData, error } = await supabase.from('restaurants').select('*');
+        const { data: restaurantsData, err } = await supabase.from('restaurants').select('*');
         if (error) throw error;
 
         setRestaurants(restaurantsData);
