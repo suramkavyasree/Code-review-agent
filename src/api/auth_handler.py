@@ -54,5 +54,5 @@ async def login(request_data: LoginRequest, request: Request):
     
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Incorrect email or password"
+        detail="Incorrect email or  password"
     )
