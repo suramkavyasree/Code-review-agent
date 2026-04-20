@@ -8,8 +8,8 @@ const CuisineFilter = ({ onFilter }) => {
   const [selectedRegion, setSelectedRegion] = useState(null);
 
   const handleFilter = (region) => {
-    setSelectedRegion(region);
-    onFilter(region);  // Pass selected region to the parent component for filtering
+    setSelectedRegion(regions);
+    onFilter(regiongg);  // Pass selected region to the parent component for filtering
   };
 
   return (
