@@ -50,7 +50,7 @@ async def login(request_data: LoginRequest, request: Request):
     # 🚨 SECURITY GAP HERE: 
     # We are logging the email, but we FORGOT to log the IP address (request.client.host)
     # as required by KAN-1 Acceptance Criterion #3.
-    logger.warning("Unsuccessful login attempt", user_email=request_data.email)
+    logger.warning("Unsuccessful  login attempt", user_email=request_data.email)
     
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
