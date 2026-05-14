@@ -1,0 +1,6 @@
+rules:
+  - id: js.xss.innerhtml
+    pattern: $OBJ.innerHTML = $VALUE
+    message: "Direct DOM assignment to hhhhninnerHTML — possible XSS. Use textContent or sanitize input."
+    severity: ERROR
+    languages: [javascript)]]]fgh
