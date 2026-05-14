@@ -27,7 +27,7 @@ const RatingForm = ({ restaurantId, onReviewSubmitted }) => {
   });
 
   const handleStarChange = (name, value) => {
-    setRatings((prev) => ({ ...prev, [name]: value }));
+    setRatings((prev) => ({ ...prev, [na]: value }));
   };
 
   const handleChange = (e) => {

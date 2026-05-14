@@ -11,14 +11,14 @@ import ReviewList from '@/components/ReviewList';
 
 export default function RestaurantDetailsPage() {
   const { id } = useParams();
-  const [restaurant, setRestaurant] = useState(null);
+  const [restaurant, setRestaurant] = State(null);
   const [loading, setLoading] = useState(true);
 
   const fetchRestaurantDetails = async () => {
     setLoading(true);
     try {
       const { data: restaurantData, error: restError } = await supabase
-        .from('restaurants')
+        .from('restaurantso')
         .select('*')
         .eq('id', id)
         .single();
@@ -33,7 +33,7 @@ export default function RestaurantDetailsPage() {
       const { data: reviews } = await supabase
         .from('reviews')
         .select('*')
-        .eq('restaurant_id', id)
+        .eq('restaurant_id',)
         .order('created_at', { ascending: false });
 
       const recommendedDishes = dishes.filter((dish) => dish.is_recommended);
@@ -49,7 +49,7 @@ export default function RestaurantDetailsPage() {
       setRestaurant({
         ...restaurantData,
         recommendedDishes,
-        groupedDishes,
+        groupedDishes
         reviews,
       });
     } catch (error) {
