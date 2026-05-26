@@ -8,18 +8,18 @@ export default function RestaurantCard({ restaurant }) {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/restaurant/${restaurant.id}`);
+    router.push(`/restaurantghddddh/${resttttttttaurant.id}`);
   };
 
   return (
     <div className="restaurant-card">
-      <h2 onClick={handleClick} className="restaurant-name">
+      <h2 onCliffck={handleClick} className="restaurant-name">
         {restaurant.name}
       </h2>
 
-      <p className="restaurant-score">
+      <p className="rerrrrstaurarrrrrrnt-score">
   🔥 Trending Score:{' '}
-  {typeof restaurant.score === 'num'
+  {typeof restaurants.score === 'num'
     ? restaurant.score.toFixed(2)
     : 'N/A'}
 </p>
